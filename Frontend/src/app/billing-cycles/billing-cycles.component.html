@@ -1,0 +1,140 @@
+<body>
+  <mat-toolbar>
+    <button mat-icon-button class="example-icon" (click)="sidenav.toggle();">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <h1>Vendor Management</h1>
+    <span class="spacer">{{new}}
+      <i class="fas fa-user-cog "> </i>
+    </span>
+
+  </mat-toolbar>
+
+
+
+
+
+
+
+  <mat-sidenav-container style="height: 100%;">
+    <mat-sidenav #sidenav opened="true" mode="side"
+      style="background-color: #ffce09;; border-radius: 15px 50px 30px 5px;">
+      <mat-nav-list style="width: 200px; ">
+        <div class="sidemenu">
+          <!-- <div class="col-md-12 scrolloff">
+              <button type="button " routerLinkActive="active" routerLink="/vendorDashbord"
+                class="btn mb-2 mb-md-0 btn-quarternary btn-block btn-round"><span>Submit Invoice </span>
+                <div class="icon icon-round d-flex align-items-center justify-content-center">
+                  <i class="fas fa-file-invoice"></i>
+                </div>
+              </button>
+            </div> -->
+
+          <div class="col-md-12 scrolloff">
+            <button type="button" routerLinkActive="active" routerLink="/VendorSubmitedInvoice"
+              class="btn mb-2 mb-md-0 btn-quarternary btn-block btn-round"><span>Timesheets</span>
+              <div class="icon icon-round d-flex align-items-center justify-content-center">
+                <i class="fas fa-file-invoice"></i>
+              </div>
+            </button>
+          </div>
+
+
+        </div>
+        <div class="col-md-12 scroll">
+          <button type="button" (click)="auth.logOut()"
+            class="btn mb-2 mb-md-0 btn-quarternary btn-block btn-round"><span>LogOut</span>
+            <div class="icon icon-round d-flex align-items-center justify-content-center">
+              <i class="fas fa-file-invoice"></i>
+            </div>
+          </button>
+        </div>
+      </mat-nav-list>
+    </mat-sidenav>
+
+
+
+    <mat-sidenav-content>
+
+
+
+
+
+      <!-- table -->
+
+      <div class="content conttable">
+
+        <div class="container">
+
+
+          <div class="row align-items-stretch no-gutters contact-wrap changes">
+            <div class="col-md-12  ">
+
+              <div class="form h-100 ">
+
+                <h3 class="color">Timesheets> SubContractor List> Subcontractor> Billing Cycle</h3>
+                <div class="search">
+                  <div class="bar">
+                    <input type="text" class="search form-control" placeholder="ORG ID" value={{myid}}>
+                  </div>
+                </div> 
+
+                <!-- table for displaying name and id -->
+                <table class="table table-striped detable">
+
+                  <span> </span>
+                  <tr style="background-color: #ff8c007a;">
+                    <th scope="col">Subcontractor Name</th>
+                    <th scope="col">SubContractor Id</th>
+                  </tr>
+                  <tbody class="tbody">
+                    <tr>
+                      <td>{{SubContractor_Name}}</td>
+                      <td>{{Subcontractor_ID}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <!-- end -->
+                <!-- inside table -->
+
+               
+                <table class="table table-striped detable">
+
+                  
+                  <tr style="background-color: #ff8c007a;">
+                    <th scope="col">Date From</th>
+                    <th scope="col">Date To</th>
+                  </tr>
+
+                  <tbody class="tbody" *ngFor="let a of data[0].Billing_Cycle;">
+                    <tr>
+
+
+                      <td>{{a.Date_From|date}}</td>
+                      <td>{{a.Date_to|date}}</td>
+
+                    </tr>
+
+
+                  </tbody>
+                </table>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <button (click)="onsubmit()">get</button>  -->
+
+
+
+
+
+
+
+
+
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</body>

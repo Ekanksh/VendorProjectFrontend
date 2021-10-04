@@ -1,0 +1,111 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; width: 100vw;
+
+}
+
+.full{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #ffce09;
+  }
+  .designed
+  {
+    height: max-content;
+      /* position: absolute; */
+      width: 10px;
+    margin-top: 4%;
+    margin-left: 1%;
+    -webkit-box-shadow: 3px 3px 5px 6px #ccc;  
+    -moz-box-shadow:    3px 3px 5px 6px #ccc;  
+    box-shadow:         3px 3px 5px 6px #ccc; 
+  }
+  .sidemenu{
+    position: absolute;
+    top:65px;
+    margin-top:10 0 !important;
+    overflow: hidden;
+    
+  
+  }
+  
+
+  .btn-block {
+    display: block;
+    width: 100%; }
+    .btn-block + .btn-block {
+      margin-top: 0.5rem; }
+
+      .btn.btn-quarternary {
+        color: black;
+        border-color: rgb(255, 206, 9);
+        background: rgb(255, 206, 9); }
+        
+        .active {
+          border-color: rgb(255, 206, 9)!important;
+          background: white !important;
+         }
+
+         
+         
+
+.btn {
+padding: 15px 35px;
+cursor: pointer;
+text-align: left;
+border-width: 1px;
+border-radius: 18px;
+font-size: 14px;
+font-weight: 500;
+-webkit-box-shadow: 0px 10px 20px -6px rgba(0, 0, 0, 0.12);
+-moz-box-shadow: 0px 10px 20px -6px rgba(0, 0, 0, 0.12);
+box-shadow: 0px 10px 20px -6px rgba(0, 0, 0, 0.12);
+overflow: hidden;
+/* position: relative; */
+} 
+
+
+.btn .icon {
+    overflow: visible;
+    border-radius: 18px;
+  position: absolute;
+  top: 0;
+  right: 20px;
+  width: 45px;
+  bottom: 0;
+  background: rgb(255, 206, 9)!; }
+
+.scroll{
+position: absolute;
+top: 80vh;
+}
+
+.scrolloff{
+overflow-x: hidden;
+}
+  
+.tbody{
+  font-weight: 450;
+  font-size: 14px;
+}
+
+.inputbox{
+  width: 90%;
+  margin: 3%;
+  background-color: #a0a0a961;
+  margin-top: 1.5%;
+ 
+}
+
+.spacer{
+  position: absolute;
+  right: 5%;
+}
+
+.alertify-logs.left, .alertify-logs:not(.right) {
+  left: 50%;
+  transform: translateX(-50%);
+  top: 70%;
+}

@@ -1,0 +1,163 @@
+body{
+    height: 100%;
+    position:fixed;
+      
+    }
+    .contact-wrap {
+        -webkit-box-shadow: 46px 10px 50px 20px rgba(0, 0, 0, 0.12);
+        -moz-box-shadow: 46px 10px 50px 20pxrgba(0, 0, 0, 0.12);
+        box-shadow: 46px 10px 50px 20px rgba(0, 0, 0, 0.12);
+        overflow:hidden;
+    }
+         
+       .scrolloff{
+        overflow: hidden;
+       }
+      
+        .color{
+      
+      background-color:#ff8c007a;
+      padding: 1%;
+          font-size: 16px;
+          font-weight: 500;
+        }
+    
+        .color2{
+      
+            background-color:rgb(39, 143, 184);
+            padding: 1%;
+                font-size: 16px;
+                font-weight: 500;
+              }
+      
+    
+      
+      .display{
+         margin: 0px;
+         
+      
+      
+      }
+      .edit{
+        font-size: 12px;
+        margin: 3%;
+        padding: 2%;
+        color: darkgrey;
+      }
+      
+      .changes{
+        border-radius: 10px;
+        
+      }
+      
+      
+      .detable {
+        width: 90%;
+        margin-bottom: 1rem;
+        margin-left: 5%;
+        background-color: transparent;
+    
+        
+        
+      }
+      
+      
+      .btn1{
+        border-radius: 5px;
+        padding: 0px 18px;
+        /* text-align: center; */
+        font-size: 12px;
+        }
+      
+      .mat-raised-button{
+      line-height: 17px;
+      }
+      
+      .custom {
+      width: 78px !important;
+      text-align: start;
+     
+      font-size: 11px;
+      }
+      
+      .btn1{
+      background-color: #ffce09;
+      }
+      .btn2{
+      background-color: chocolate;
+      }
+      .btn3{
+      background-color: rgb(192, 164, 250);
+      }
+      .btn4{
+      background-color: rgb(94, 214, 146);
+      }   
+      .btn5{
+      background-color: steelblue;
+      }
+      
+      .adjustheight{
+          margin:0%;
+          
+      }
+    
+      .height{
+          margin:0.5%;
+      }
+    
+      .height2{
+        height: max-content;
+    }
+      
+      .content{
+          margin: 2%;
+          
+          
+      }
+      
+      
+     
+      .mat-drawer-content {
+        position: relative;
+        z-index: 1;
+        display: block;
+        height: 90%;
+        overflow: auto;
+    }
+
+    .button{
+    
+      position: absolute;
+      bottom: auto;
+     right: 10%;
+     margin-right: 24px;
+    }
+
+    .bun{
+      width: 100px;
+      border-radius: 5px;
+      background-color: rgb(122, 163, 197);
+      margin: 2%;
+
+    }
+
+    .bun1
+    {
+      width: 100px;
+      border-radius: 5px;
+      
+      margin: 2%;
+      background-color: red;
+    }
+
+    .bun2
+    {
+      width: 100px;
+      border-radius: 5px;
+      background-color: rgb(122, 163, 197);
+      margin-left: 77%;
+      margin-bottom: -29px;
+    z-index: 1;
+    position: absolute;
+   
+    }

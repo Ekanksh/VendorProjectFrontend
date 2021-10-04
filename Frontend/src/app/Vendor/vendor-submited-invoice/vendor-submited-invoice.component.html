@@ -1,0 +1,138 @@
+<body>
+  <mat-toolbar>
+    <button mat-icon-button class="example-icon" (click)="sidenav.toggle();">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <h1>Vendor Management</h1>
+    <span class="spacer">{{new}}
+      <i class="fas fa-user-cog "> </i>
+    </span>
+
+  </mat-toolbar>
+
+
+
+
+
+
+
+  <mat-sidenav-container style="height: 100%;">
+    <mat-sidenav #sidenav opened="true" mode="side"
+      style="background-color: #ffce09;; border-radius: 15px 50px 30px 5px;">
+      <mat-nav-list style="width: 200px; ">
+        <div class="sidemenu">
+          <!-- <div class="col-md-12 scrolloff">
+            <button type="button " routerLinkActive="active" routerLink="/vendorDashbord"
+              class="btn mb-2 mb-md-0 btn-quarternary btn-block btn-round"><span>Submit Invoice </span>
+              <div class="icon icon-round d-flex align-items-center justify-content-center">
+                <i class="fas fa-file-invoice"></i>
+              </div>
+            </button>
+          </div> -->
+
+          <div class="col-md-12 scrolloff">
+            <button type="button" routerLinkActive="active" routerLink="/VendorSubmitedInvoice"
+              class="btn mb-2 mb-md-0 btn-quarternary btn-block btn-round"><span>Timesheets</span>
+              <div class="icon icon-round d-flex align-items-center justify-content-center">
+                <i class="fas fa-file-invoice"></i>
+              </div>
+            </button>
+          </div>
+
+
+        </div>
+        <div class="col-md-12 scroll">
+          <button type="button" (click)="auth.logOut()"
+            class="btn mb-2 mb-md-0 btn-quarternary btn-block btn-round"><span>LogOut</span>
+            <div class="icon icon-round d-flex align-items-center justify-content-center">
+              <i class="fas fa-file-invoice"></i>
+            </div>
+          </button>
+        </div>
+      </mat-nav-list>
+    </mat-sidenav>
+
+
+
+    <mat-sidenav-content>
+
+
+
+
+
+      <!-- table -->
+
+      <div class="content conttable">
+
+        <div class="container">
+
+
+          <div class="row align-items-stretch no-gutters contact-wrap changes">
+            <div class="col-md-12  ">
+
+              <div class="form h-100 ">
+
+                <h3 class="color">Timesheets> SubContractor List</h3>
+
+                <!-- inside table -->
+
+                <div class="search">
+                  <div class="bar">
+                    <input type="text" class="search form-control"  value={{id}}>
+                  </div>
+                </div>
+                <table class="table table-striped detable" >
+
+
+                  <tr style="background-color: #ff8c007a;">
+                    <th scope="col">SubContractor ID</th>
+                    <th scope="col">SubContractor Name</th>
+                    <th scope="col">Project Name</th>
+                    <th scope="col">Vendor Name</th>
+                    <th scope="col">Billing Frequency</th>
+                    <th scope="col">Subcontractor End Date</th>
+                    <th scope="col">Project Type</th>
+                    <th scope="col">Buy Rate</th>
+                    <th scope="col">Margin</th>
+
+                  </tr>
+
+                  <tbody class="tbody" >
+                    <tr *ngFor="let a of AllData " >
+                      <td><button   routerLink="/BillingCycle/{{a.Subcontractor_ID}}" mat-raised-button class="custom btn5" style="font-size:13px"> {{a.Subcontractor_ID}}</button></td>
+                     
+                      <td>{{a.Subcontractor_Name}}</td>
+                      <td>{{a.Project_Name}}</td>
+                      <td>{{a.Vendor_Name}}</td>
+                      <td>{{a.Billing_Frequency}}</td>
+                      <td>{{a.Subcontractor_End_Date}}</td>
+                      <td>{{a.Project_Type}}</td>
+                      <td>{{a.Buy_Rate}}</td>
+                      <td>{{a.Margin}}</td>
+                    </tr>
+
+
+                  </tbody>
+                </table>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <button (click)="onsubmit()">get</button> -->
+
+
+
+
+
+
+
+
+
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</body>
+
+

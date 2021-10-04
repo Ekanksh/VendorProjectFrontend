@@ -1,0 +1,47 @@
+
+
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<form class="login100-form validate-form">
+					<span class="login100-form-title  p-b-26">
+						<div class="divheight">Vendor Management For Vendors</div>
+						
+					</span>
+					
+
+					<form autocomplete="off" [formGroup]="user"
+                (ngSubmit)="onSubmit()">
+                <mat-form-field class="userfield">
+                    <mat-label><i class="fas fa-user"></i>UserName</mat-label>
+                    <input matInput placeholder="Email" formControlName="UserName">
+                    <mat-error>This Field is required</mat-error>
+                </mat-form-field>
+                <mat-form-field class="userfield">
+                    <mat-label><i class="fas fa-lock"></i> Password</mat-label>
+                    <input matInput type="password" placeholder="Enter Password" formControlName="password">
+                    <mat-error>This Field is required</mat-error>
+                </mat-form-field>
+				<div class ="btndiv">
+					<button mat-raised-button class ="btn" type="submit">Signin</button></div>
+                
+            </form>
+
+			<div class="text-center p-t-115">
+				<span class="txt1">
+					If not valid user
+				</span>
+
+				<a class="txt2" routerLinkActive="active" routerLink="/EnrollUserId">
+					Enroll First
+				</a>
+			
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+
+

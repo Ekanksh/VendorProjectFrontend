@@ -1,0 +1,44 @@
+
+
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<form class="login100-form validate-form">
+					<span class="login100-form-title  p-b-26">
+						<div class="divheight">Vendor Management</div>
+						
+					</span>
+					
+
+					
+                <mat-form-field class="userfield">
+                    <mat-label><i class="fas fa-user"></i>Org1UserId</mat-label>
+                    <input matInput   name="enrollid"  [(ngModel)]="new">
+                    <mat-error>This Field is required</mat-error>
+                </mat-form-field>
+             
+				<div class ="btndiv" style="text-align: center;">
+					<button mat-raised-button class ="btn" type="submit" (click)="OnClick()">Login with ORGID</button>
+                 
+				<br>
+				<br> 
+                
+                <button type="submit"   routerLink="/RegistertoOrg"  mat-raised-button class="custom btn5">Register</button>
+                </div>
+
+                    <div class="text-center p-t-115">
+						<span class="txt1">
+						
+						</span>
+						</div>
+      
+
+					
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+
+

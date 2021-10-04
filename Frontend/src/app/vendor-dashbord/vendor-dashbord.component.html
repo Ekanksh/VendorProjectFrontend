@@ -1,0 +1,175 @@
+<mat-toolbar>
+    <button mat-icon-button class="example-icon" (click)="sidenav.toggle();">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <h1>Vendor Management</h1>
+    <span class="spacer">{{Name}}
+        <i class="fas fa-user-cog "> </i>
+    </span>
+
+</mat-toolbar>
+
+
+
+<mat-sidenav-container style="height: 100%;">
+    <mat-sidenav #sidenav opened="true" mode="side"></mat-sidenav>
+
+
+
+    <mat-sidenav-content>
+        <form autocomplete="off" [formGroup]="data" (ngSubmit)="onSubmit()">
+
+            <div class="content">
+
+                <div class="container">
+                    <h3 style="font-weight: 500; margin: 1%;">Subcontractor Details </h3>
+
+                    <div class="row align-items-stretch no-gutters contact-wrap changes">
+
+                        <div class="col-md-12  ">
+
+                            <div class="form h-100 ">
+
+
+
+                                <h3 class="color">Subcontractor Details</h3>
+                                <div class="adjustheight">
+                                    <div class="row display">
+                                        <div class="col-md-3 display ">
+                                            <label class="edit">Subcontractor Id </label>
+                                            <input type="text" class="form-control inputbox" name="name" id="name"
+                                                placeholder="Subcontractor Id" formControlName="Subcontractor_ID">
+                                        </div>
+                                        <div class="col-md-3 ">
+                                            <label class="edit">Subcontractor Name</label>
+                                            <input type="text" class="form-control inputbox" name="email" id="email"
+                                                placeholder="Subcontractor Name" formControlName="Subcontractor_Name">
+                                        </div>
+                                        <div class="col-md-3 ">
+                                            <label class="edit">Project Name</label>
+                                            <input type="text" class="form-control inputbox" name="contname"
+                                                id="conname" placeholder="Project Name" formControlName="Project_Name">
+                                        </div>
+                                        <div class="col-md-3 ">
+                                            <label class="edit">Vendor Name</label>
+                                            <input type="text" class="form-control inputbox" name="strdate" id="strdate"
+                                                placeholder="Vendor Name" formControlName="Vendor_Name">
+                                        </div>
+
+                                        <div class="col-md-3 display ">
+                                            <label class="edit">Billing Frequency</label>
+                                            <input type="text" class="form-control inputbox" name="enddate" id="enddate"
+                                                placeholder="Billing Frequency" formControlName="Billing_Frequency">
+                                        </div>
+                                        <div class="col-md-3 ">
+                                            <label class="edit">Subcontractor End Date</label>
+                                            <input type="date" class="form-control inputbox" name="vendname"
+                                                id="vendname" placeholder="Subcontractor End Date"
+                                                formControlName="Subcontractor_End_Date">
+                                        </div>
+                                        <div class="col-md-3 ">
+                                            <label class="edit">Project Type</label>
+                                            <input type="text" class="form-control inputbox" name="rate" id="rate"
+                                                placeholder="Project Type" formControlName="Project_Type">
+                                        </div>
+                                        <div class="col-md-3 ">
+                                            <label class="edit">Buy Rate</label>
+                                            <input type="number" class="form-control inputbox" name="billed" id="billed"
+                                                placeholder="Buy Rate" formControlName="Buy_Rate">
+                                        </div>
+
+                                        <div class="col-md-3 ">
+                                            <label class="edit">Margin</label>
+                                            <input type="number" class="form-control inputbox" name="apramount"
+                                                id="apramount" placeholder="Margin" formControlName="Margin">
+                                        </div>
+                                    </div>
+
+                                    <!-- billing cycle -->
+                                    <div class="content conttable">
+
+                                        <div class="container">
+
+                                            <div class="row align-items-stretch no-gutters contact-wrap changes">
+                                                <div class="col-md-12  ">
+                                                    <div class="form h-100 ">
+                                                       
+                                                            <h3 class="color2">Billable Hours</h3>
+
+                                                            <!-- inside table -->
+
+                                                            <table class="table table-striped detable">
+
+
+                                                                <tr style="background-color:#7582f77a">
+                                                                    <th scope="col">Date (From)</th>
+                                                                    <th scope="col">Date (To)</th>
+                                                                    
+                                                                    <th width="150px"><button type="button"
+                                                                            (click)="addSkill()" class="bun">Add
+                                                                            Inputs</button></th>
+
+                                                                </tr>
+                                                             
+                                                                    <tbody class="tbody" formArrayName="Billing_Cycle"
+                                                                    *ngFor="let skill of formData.controls; let i = index">
+
+
+                                                                        <tr  [formGroupName]="i">
+
+                                                                            <td><input type="date"
+                                                                                    formControlName="Date_From"
+                                                                                    class="form-control inputbox"
+                                                                                    placeholder="dd-mm-yyyy"></td>
+
+
+                                                                            <td><input type="date"
+                                                                                    formControlName="Date_to"
+                                                                                    class="form-control inputbox"
+                                                                                    placeholder="dd-mm-yyyy"></td> 
+ 
+                                                                             <td> <button 
+                                                                                    class="bun1">Remove</button>
+                                                                            </td> 
+
+                                                                        </tr>
+
+
+
+
+                                                                    </tbody>
+                                                                
+
+
+
+                                                            </table>
+                                                    
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- billing cycle end -->
+
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="example-button-row button">
+                <button mat-flat-button style="color: black;background-color: #ffce09;"
+                    type="submit">Submit</button>
+            </div>
+
+
+
+
+        </form>
+    </mat-sidenav-content>
+
+
+
+</mat-sidenav-container>

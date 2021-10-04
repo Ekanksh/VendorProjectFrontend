@@ -1,0 +1,45 @@
+
+
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<form class="login100-form validate-form">
+					<span class="login100-form-title  p-b-26">
+						<div class="divheight">Vendor Management</div>
+						
+					</span>
+					
+
+					<form autocomplete="off" [formGroup]="user"
+                (ngSubmit)="onSubmit()">
+                <mat-form-field class="userfield">
+                    <mat-label><i class="fas fa-user"></i>UserName</mat-label>
+                    <input matInput  formControlName="UserName">
+                    <mat-error>This Field is required</mat-error>
+                </mat-form-field>
+				<mat-form-field class="userfield">
+                    <mat-label><i class="fas fa-user"></i>Org1UserId</mat-label>
+                    <input matInput  formControlName="ID">
+                    <mat-error>This Field is required</mat-error>
+                </mat-form-field>
+             
+				<div class ="btndiv">
+					<button mat-raised-button class ="btn" type="submit">Enroll & Register</button></div>
+                
+
+                    <div class="text-center p-t-115">
+						<span class="txt1">
+						
+						</span>
+						</div>
+            </form>
+
+					
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+
+
